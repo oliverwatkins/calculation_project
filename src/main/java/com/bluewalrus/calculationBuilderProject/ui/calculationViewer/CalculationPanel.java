@@ -31,7 +31,6 @@ public class CalculationPanel extends JPanel {
         this.rootNode = rootNode;
 
         System.out.println("setting node ");
-//		System.out.println(" " + rootNode.get);
         System.out.println("setting node ");
 
         //remove all components
@@ -52,7 +51,6 @@ public class CalculationPanel extends JPanel {
                 System.out.println("class : " + bon.getComponent(i).getClass());
 
             }
-
         }
         add(rootNode, gbc);
         revalidate();
@@ -65,5 +63,4 @@ public class CalculationPanel extends JPanel {
     public void setRootNode(Node rootNode) {
         this.rootNode = rootNode;
     }
-
 }

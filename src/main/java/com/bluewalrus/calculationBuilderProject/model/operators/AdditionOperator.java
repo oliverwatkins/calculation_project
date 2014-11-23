@@ -13,7 +13,7 @@ public class AdditionOperator extends BinaryOperator {
     }
 
     public Number calculate() {
-		//get first node plus second node
+        //get first node plus second node
         // TODO Auto-generated method stub
         return null;
     }

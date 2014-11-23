@@ -56,7 +56,7 @@ public class AdditionOperatorNode extends LeftRightNode {
     }
 
     public void setModelObject(CalculationObject calcObj) {
-		//TODO refactor this
+        //TODO refactor this
         //set internal
         additionOperator = (AdditionOperator) calcObj;
         additionOperator.setFirstOperand(additionOperator.getFirstOperand());

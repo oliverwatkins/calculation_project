@@ -10,6 +10,11 @@ import com.bluewalrus.calculationBuilderProject.model.Input;
 import com.bluewalrus.calculationBuilderProject.model.operators.AdditionOperator;
 import com.bluewalrus.calculationBuilderProject.model.operators.DivisionOperator;
 
+/**
+ * Table model for the calculations
+ * 
+ * @author oliver
+ */
 public class CalculationListTableModel extends AbstractTableModel {
 
     private String[] columnHeaders = new String[]{"Name", "Symbol"};

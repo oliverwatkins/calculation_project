@@ -1,24 +1,11 @@
 package com.bluewalrus.calculationBuilderProject.model;
 
 /**
- * Calculation - this is not so cool!!!!
- * 
- * hi hi
- * 
- * back to master
- * 
- * Hello world
- * 
- * something i want
- * 
- * 
- * something sexy new
- * 
- * 
- * 
+ * Calculation
+ *
+ *
  * @author oliver
  */
-
 public class Calculation extends CalculationObject {
 
     private CalculationObject rootObject;
@@ -51,7 +38,7 @@ public class Calculation extends CalculationObject {
                 + "" + rootObject.toXML()
                 + "</calculation>";
     }
-    
+
     public String toString() {
         return rootObject.toString();
     }
