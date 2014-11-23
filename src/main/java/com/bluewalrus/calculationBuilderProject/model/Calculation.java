@@ -1,7 +1,9 @@
 package com.bluewalrus.calculationBuilderProject.model;
 
 /**
- * Calculation
+ * Calculation - this is not so cool!!!!
+ * 
+ * hi hi
  * 
  * back to master
  * 
