@@ -6,7 +6,6 @@ import javax.swing.JLabel;
 
 import com.bluewalrus.calculationBuilderProject.main.LeftRightNode;
 import com.bluewalrus.calculationBuilderProject.model.CalculationObject;
-import com.bluewalrus.calculationBuilderProject.model.operators.AdditionOperator;
 import com.bluewalrus.calculationBuilderProject.model.operators.MultiplicationOperator;
 
 public class MultiplicationOperatorNode extends LeftRightNode {

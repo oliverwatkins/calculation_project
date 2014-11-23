@@ -6,7 +6,6 @@ import com.bluewalrus.calculationBuilderProject.main.Node;
 import com.bluewalrus.calculationBuilderProject.main.NodeToModelMapper;
 import com.bluewalrus.calculationBuilderProject.main.PowerLikeNode;
 import com.bluewalrus.calculationBuilderProject.model.CalculationObject;
-import com.bluewalrus.calculationBuilderProject.model.operators.AdditionOperator;
 import com.bluewalrus.calculationBuilderProject.model.operators.PowerOperator;
 
 public class PowerOperatorNode extends PowerLikeNode {

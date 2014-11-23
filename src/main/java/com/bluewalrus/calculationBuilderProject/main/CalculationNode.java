@@ -6,6 +6,11 @@ import java.awt.Color;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 
+/**
+ * Arbitrary input node. Used in drag and dropping from calculatinos table.
+ * @author oliver
+ */
+
 public class CalculationNode extends Node {
 
     private Calculation calculation;

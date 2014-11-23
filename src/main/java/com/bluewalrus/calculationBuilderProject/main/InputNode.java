@@ -7,7 +7,6 @@ import javax.swing.JLabel;
 import com.bluewalrus.calculationBuilderProject.ui.Colors;
 
 import com.bluewalrus.calculationBuilderProject.model.CalculationObject;
-import com.bluewalrus.calculationBuilderProject.model.Empty;
 import com.bluewalrus.calculationBuilderProject.model.Input;
 
 public class InputNode extends Node {

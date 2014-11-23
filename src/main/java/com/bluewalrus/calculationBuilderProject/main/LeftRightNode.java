@@ -3,6 +3,10 @@ package com.bluewalrus.calculationBuilderProject.main;
 import java.awt.Color;
 import java.awt.GridBagConstraints;
 
+/**
+ * A left-right node is a node that is like subtraction, addition, but not division.
+ * @author oliver
+ */
 public abstract class LeftRightNode extends BinaryOperatorNode {
 
     private BracketPair bracketPair = new BracketPair();

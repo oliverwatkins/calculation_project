@@ -17,12 +17,12 @@ import java.awt.event.MouseListener;
 import java.io.Serializable;
 
 import javax.swing.BorderFactory;
-import javax.swing.JPanel;
 
 import com.bluewalrus.calculationBuilderProject.model.CalculationObject;
 import com.bluewalrus.calculationBuilderProject.model.operators.Operator;
 import com.bluewalrus.calculationBuilderProject.ui.MouseClickManager;
 import com.bluewalrus.calculationBuilderProject.ui.NodeDropProcessor;
+import javax.swing.JComponent;
 
 /**
  * Central class for extending
@@ -33,7 +33,7 @@ import com.bluewalrus.calculationBuilderProject.ui.NodeDropProcessor;
  * @author Olly
  *
  */
-public abstract class Node extends JPanel implements MouseListener, Serializable {
+public abstract class Node extends JComponent implements MouseListener, Serializable {
 
     private DragSource dragSource;
     private DropTarget dropTarget;

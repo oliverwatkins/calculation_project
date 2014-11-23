@@ -13,8 +13,6 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
 
-import javax.swing.JPopupMenu;
-import javax.swing.JTextField;
 
 import com.bluewalrus.calculationBuilderProject.model.CalculationObject;
 import com.bluewalrus.calculationBuilderProject.model.Empty;
@@ -52,9 +50,11 @@ public class EmptyNode extends Node implements MouseMotionListener, MouseListene
 
         System.out.println("mouse clicked and c = " + c.getClass());
         if (c instanceof EmptyNode && c.getParent() != null) {
+            
             final ValueEntryPopupMenu menu = new ValueEntryPopupMenu();
             menu.show(this, arg0.getX(), arg0.getY());
 
+            
             System.out.println("c parent = " + c.getParent());
             Node parent = (Node) c.getParent();
             GridBagLayout gbl = (GridBagLayout) parent.getLayout();

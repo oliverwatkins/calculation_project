@@ -11,8 +11,8 @@ import javax.swing.JPanel;
 import com.bluewalrus.calculationBuilderProject.main.EmptyNode;
 import com.bluewalrus.calculationBuilderProject.main.Node;
 import com.bluewalrus.calculationBuilderProject.model.CalculationObject;
-import com.bluewalrus.calculationBuilderProject.model.operators.AdditionOperator;
 import com.bluewalrus.calculationBuilderProject.model.operators.SigmaOperator;
+import javax.swing.JComponent;
 
 public class SigmaOperatorNode extends Node {
 
@@ -62,7 +62,7 @@ public class SigmaOperatorNode extends Node {
         return new RenderedLabel();
     }
 
-    public JPanel getTopPanel() {
+    public JComponent getTopPanel() {
         EmptyNode node = new EmptyNode();
         node.setSize(new Dimension(10, 10));
         return node;

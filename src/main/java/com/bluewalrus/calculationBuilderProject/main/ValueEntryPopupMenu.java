@@ -28,7 +28,6 @@ public class ValueEntryPopupMenu extends JPopupMenu {
 
             public void keyTyped(KeyEvent arg0) {
                 System.out.println("key typed");
-                // TODO Auto-generated method stub
 
                 if (arg0.getKeyChar() == KeyEvent.VK_ENTER) {
                     System.out.println("enter pressed");
