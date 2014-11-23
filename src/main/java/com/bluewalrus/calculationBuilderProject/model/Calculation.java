@@ -3,7 +3,7 @@ package com.bluewalrus.calculationBuilderProject.model;
 /**
  * Calculation
  * 
- * 
+ * Hello world
  * 
  * @author oliver
  */
