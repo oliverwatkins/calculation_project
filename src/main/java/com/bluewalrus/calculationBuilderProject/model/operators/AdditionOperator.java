@@ -3,7 +3,7 @@ package com.bluewalrus.calculationBuilderProject.model.operators;
 public class AdditionOperator extends BinaryOperator {
 
     public String getName() {
-        // TODO Auto-generated method stub
+        // TODO Auto-generated method stub..
         return "Addition";
     }
 
