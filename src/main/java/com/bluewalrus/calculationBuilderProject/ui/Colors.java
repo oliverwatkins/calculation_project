@@ -7,5 +7,7 @@ public class Colors {
     public static final Color CALC_COLOR = Color.BLUE;
     public static final Color INPUT_COLOR = Color.GREEN;
     public static final Color OPERATOR_COLOR = Color.RED;
+    public static final Color CONSTANT_COLOR = Color.BLACK;
+    
 
 }

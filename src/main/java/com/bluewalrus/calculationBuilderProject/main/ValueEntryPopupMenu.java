@@ -4,10 +4,13 @@ import com.bluewalrus.calculationBuilderProject.model.Input;
 import com.bluewalrus.calculationBuilderProject.model.NumericalConstant;
 import java.awt.Component;
 import java.awt.Dimension;
+import java.awt.FlowLayout;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
+import java.awt.LayoutManager;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import javax.swing.JComponent;
 
 import javax.swing.JPopupMenu;
 import javax.swing.JTextField;
@@ -50,26 +53,46 @@ public class ValueEntryPopupMenu extends JPopupMenu {
                     numberNode = new NumberNode(c);
                     
                     
-                    Node parent = (Node) componentClicked.getParent();
-                    GridBagLayout gbl = (GridBagLayout) parent.getLayout();
+                    Object p = (Object) componentClicked.getParent();
+                    
+                    JComponent parent = (JComponent)p;
+                    LayoutManager lm = parent.getLayout();
 
-                    GridBagConstraints gbc = gbl.getConstraints(componentClicked);
+                    if (lm instanceof GridBagLayout) {
+                        
+                        GridBagLayout gbl = (GridBagLayout) lm;
+                        
+                        GridBagConstraints gbc = gbl.getConstraints(componentClicked);
+                                            Input i = new Input("balh" , "b");
+                        InputNode n = new InputNode(i);
 
-                    Input i = new Input("balh" , "b");
-                    InputNode n = new InputNode(i);
+    //                    parent.add(numberNode, gbc);
+                        parent.add(numberNode, gbc);
+                        System.out.println("parent = " + parent);
+
+                        ValueEntryPopupMenu.this.setVisible(false);
+//                        parent.revalidate();
+
+                        parent.remove(componentClicked);
+
+                        parent.getParent().revalidate();
+//                        parent.getParent().getParent().revalidate();
+                        
+                    } else if (lm instanceof FlowLayout) {
+                        
+                        FlowLayout fl = (FlowLayout) lm;
+                        parent.remove(componentClicked);
+                        parent.add(numberNode);
+                        parent.getParent().revalidate();
+                        
+                        ValueEntryPopupMenu.this.setVisible(false);
+                        
+                    }
                     
-//                    parent.add(numberNode, gbc);
-                    parent.add(numberNode, gbc);
-                    System.out.println("parent = " + parent);
                     
-                    ValueEntryPopupMenu.this.setVisible(false);
-                    parent.revalidate();
                     
-                    parent.remove(componentClicked);
-//                    parent.remove(1);
-                    
-                    parent.getParent().revalidate();
-                    parent.getParent().getParent().revalidate();
+
+
 //					ValueEntryPopupMenu.this.firePopupMenuCanceled();
 //					ValueEntryPopupMenu.this.
                 }

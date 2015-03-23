@@ -22,7 +22,7 @@ public class NumberNode extends Node{
     public NumberNode(NumericalConstant numericalConstant) {
         this.numericalConstant = numericalConstant;
         JLabel label = new JLabel("" + numericalConstant);
-        label.setForeground(Colors.INPUT_COLOR);
+        label.setForeground(Colors.CONSTANT_COLOR);
         label.setBackground(Color.WHITE);
         this.setBackground(Color.WHITE);
         this.add(label);
