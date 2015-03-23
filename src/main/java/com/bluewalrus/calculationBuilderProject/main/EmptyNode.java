@@ -46,22 +46,26 @@ public class EmptyNode extends Node implements MouseMotionListener, MouseListene
         //get node where mouse is over
         Point location = arg0.getPoint();
 
-        Component c = this.getComponentAt(location);
+        Component componentClicked = this.getComponentAt(location);
 
-        System.out.println("mouse clicked and c = " + c.getClass());
-        if (c instanceof EmptyNode && c.getParent() != null) {
+        System.out.println("mouse clicked and c = " + componentClicked.getClass());
+        if (componentClicked instanceof EmptyNode && componentClicked.getParent() != null) {
             
-            final ValueEntryPopupMenu menu = new ValueEntryPopupMenu();
+            final ValueEntryPopupMenu menu = new ValueEntryPopupMenu(componentClicked);
             menu.show(this, arg0.getX(), arg0.getY());
 
             
-            System.out.println("c parent = " + c.getParent());
-            Node parent = (Node) c.getParent();
-            GridBagLayout gbl = (GridBagLayout) parent.getLayout();
-
-            GridBagConstraints gbc = gbl.getConstraints(c);
-
-            revalidate();
+            
+            
+//            System.out.println("menu.numberNode = " + menu.numberNode);
+//            
+//            System.out.println("c parent = " + componentClicked.getParent());
+//            Node parent = (Node) componentClicked.getParent();
+//            GridBagLayout gbl = (GridBagLayout) parent.getLayout();
+//
+//            GridBagConstraints gbc = gbl.getConstraints(componentClicked);
+//
+//            revalidate();
         }
     }
 
