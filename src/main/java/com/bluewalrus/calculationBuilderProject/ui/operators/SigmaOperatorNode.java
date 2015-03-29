@@ -11,7 +11,9 @@ import javax.swing.JPanel;
 import com.bluewalrus.calculationBuilderProject.main.EmptyNode;
 import com.bluewalrus.calculationBuilderProject.main.Node;
 import com.bluewalrus.calculationBuilderProject.model.CalculationObject;
+import com.bluewalrus.calculationBuilderProject.model.operators.BinaryOperator;
 import com.bluewalrus.calculationBuilderProject.model.operators.SigmaOperator;
+import java.awt.GridBagLayout;
 import javax.swing.JComponent;
 
 public class SigmaOperatorNode extends Node {
@@ -27,9 +29,7 @@ public class SigmaOperatorNode extends Node {
     public SigmaOperatorNode() {
 
         label = new RenderedLabel();
-//		this.setSize(new Dimension(70,25));
         this.setBackground(Color.WHITE);
-//		this.addComponentListener(bracketPair);
 
         GridBagConstraints gbc2 = new GridBagConstraints();
         gbc2.gridx = 0;
@@ -53,7 +53,6 @@ public class SigmaOperatorNode extends Node {
         gbc4.gridx = 1;
         gbc4.gridy = 0;
         gbc4.gridheight = 3;
-//		gbc4.gridheight = 3;
 
         this.add(rightNode, gbc4);
     }
@@ -66,7 +65,6 @@ public class SigmaOperatorNode extends Node {
         EmptyNode node = new EmptyNode();
         node.setSize(new Dimension(10, 10));
         return node;
-
     }
 
     public JPanel getBottomPanel() {
@@ -82,6 +80,30 @@ public class SigmaOperatorNode extends Node {
         return node;
     }
 
+    public void replaceRightNodeWithSecond(Node nodeToBeReplaced, Node nodeToDrop) {
+        
+//        SigmaOperator binO = (SigmaOperator) this.getModelObject();
+                
+        
+//        if (nodeToBeReplaced == firstOperand) {
+//            binO.setFirstOperand(nodeToDrop.getModelObject());
+//        } else if (nodeToBeReplaced == secondOperand) {
+//            binO.setSecondOperand(nodeToDrop.getModelObject());
+//        } else {
+//        }
+
+        //storing gbl
+        GridBagLayout gbl = (GridBagLayout) this.getLayout();
+        GridBagConstraints gbc = gbl.getConstraints(nodeToBeReplaced);
+
+        //now removing the empty node
+        this.remove(nodeToBeReplaced);
+
+        this.add(nodeToDrop, gbc);
+
+        this.revalidate();
+    }
+
     private class RenderedLabel extends JLabel {
 
         public RenderedLabel() {
@@ -92,13 +114,7 @@ public class SigmaOperatorNode extends Node {
             this.setPreferredSize(d);
             this.setFont(new Font("Times New Roman", Font.PLAIN, 40));
             this.setText("\u03a3");
-
         }
-
-//		public void paintComponent(Graphics g)
-//		{
-//			g.drawLine(0,3,30,3);
-//		}
     }
 
     public CalculationObject getModelObject() {

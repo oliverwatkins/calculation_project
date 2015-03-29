@@ -25,6 +25,7 @@ import com.bluewalrus.calculationBuilderProject.ui.calculationViewer.Calculation
 import com.bluewalrus.calculationBuilderProject.ui.operators.AdditionOperatorNode;
 import com.bluewalrus.calculationBuilderProject.ui.operators.DivisionOperatorNode;
 import com.bluewalrus.calculationBuilderProject.ui.operators.MultiplicationOperatorNode;
+import com.bluewalrus.calculationBuilderProject.ui.operators.SigmaOperatorNode;
 import com.bluewalrus.calculationBuilderProject.ui.operators.SubtractionOperatorNode;
 
 public class NodeDropProcessor {
@@ -56,6 +57,12 @@ public class NodeDropProcessor {
 
                     operator.replaceFirstNodeWithSecond(nodeToDropOnto, binN);
 
+                }else if (parent instanceof SigmaOperatorNode) {
+                    
+                    SigmaOperatorNode operator = (SigmaOperatorNode) parent;
+                    Node binN = NodeToModelMapper.getNodeForModelObject((CalculationObject) dropObject);
+                    
+                    operator.replaceRightNodeWithSecond(nodeToDropOnto, binN);
                 }
             } else {
                 //nothing for now
